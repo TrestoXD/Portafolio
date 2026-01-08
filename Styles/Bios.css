@@ -1,0 +1,58 @@
+@font-face {
+    font-family: GNU Unifont;
+    src: url(unifont-17.0.03.otf);
+}
+
+body{
+    font-family: GNU Unifont;
+    font-size: 20px;
+
+    color: white;
+    background-color: black;
+}
+
+.title{
+    color: rgb(191, 191, 191);
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.entry{
+    margin-left: 80px;
+    margin-right: 80px;
+
+    border: 2px white solid;
+
+    padding: 4px;
+    
+    line-height: 0px;
+    gap: 0px;
+
+    height: 80vh;
+}
+
+button{
+    font-family: GNU Unifont;
+    background-color: transparent;
+    border: none;
+
+    color: white ;
+
+    font-size: 20px;
+    width: 100%;
+
+    text-align: start;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
+
+footer{
+    line-height: 2px;
+    padding-left: 75px;
+}
