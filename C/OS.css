@@ -1,0 +1,38 @@
+/* START MENU */
+
+@keyframes moving{
+    0%{
+        background-position: 0% 0%;
+    }
+    
+    50%{
+        background-position: 50% 50%;
+    }
+
+    100%{
+        background-position: 100% 100%;
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.loading-bar{
+    position: absolute;
+    display: flex;
+    margin-top: auto;
+
+    width: 100%;
+    height: 40px;
+
+    background: linear-gradient(90deg,rgba(6, 139, 191, 1) 0%, rgba(171, 171, 171, 1) 15%, rgba(171, 171, 171, 1) 35%, rgba(6, 139, 191, 1) 50%, rgba(171, 171, 171, 1) 65%, rgba(171, 171, 171, 1) 85%, rgba(6, 139, 191, 1) 100%);
+    background-size: 200% 200%;
+    animation-name: moving;
+    animation-duration: 1s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 0;
+}
