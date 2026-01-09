@@ -21,11 +21,16 @@
         background-position: 100% 100%;
     }
 }
+
+@font-face {
+    font-family: F95;
+    src: url(MS\ Sans\ Serif\ 8pt.ttf);
+}
 .Startmenu{
     margin: 0;
     padding: 0;
 
-    background: url(./Win95bootsm.png);
+    background: url(./images/Win95bootsm.png);
     background-repeat: no-repeat;
     background-size: 190vh 100vh;
     background-position: center b;
@@ -53,3 +58,57 @@ body{
     animation-timing-function: linear;
     bottom: 0;
 }
+
+/* Desktop */
+
+.Desktop{
+    font-family: F95;
+    font-smooth: none;
+
+    background-color: #008080;
+    color: white;
+}
+
+.button{
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    
+    background-color: #c3c3c3;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white black black white;
+}
+
+.Taskbar{
+    padding: 5px;
+
+    background-color: #c3c3c3;
+
+    border-color: white none none none;
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.StartButton{
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+
+    background-color: #c3c3c3;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white black black white;
+}
+
+.StartButton:active{
+    background-color: #a0a0a4;
+    border-color: black white white black;
+}
+
+.StartButton p {
+    line-height: 0px;
+}
+/* Barra de tareas */
