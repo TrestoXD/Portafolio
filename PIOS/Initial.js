@@ -1,10 +1,9 @@
 let debugmode = false;
-let timer = 4;
 
 if(debugmode == false){
     console.log("Initiating Countdown...");
     ChangeTimer();
-    setTimeout(StartOS, 5000);
+    setTimeout(StartBoot, 5000);
 }
 
 function ChangeTimer(){
@@ -21,7 +20,7 @@ function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function StartOS(){
-    console.log("OS initiated")
+function StartBoot(){
+    console.log("BootScreen initiated")
     window.open("./C/Startmenu.html", "_self")
 }
