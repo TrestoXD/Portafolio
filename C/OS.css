@@ -1,3 +1,11 @@
+/* 
+    Este es el css para todo el "sistema operativo" a partir de la boot screen 
+
+    version 0.2
+
+*/
+
+
 /* START MENU */
 
 @keyframes moving{
@@ -12,6 +20,15 @@
     100%{
         background-position: 100% 100%;
     }
+}
+.Startmenu{
+    margin: 0;
+    padding: 0;
+
+    background: url(./Win95bootsm.png);
+    background-repeat: no-repeat;
+    background-size: 190vh 100vh;
+    background-position: center b;
 }
 
 body{
@@ -30,7 +47,7 @@ body{
     background: linear-gradient(90deg,rgba(6, 139, 191, 1) 0%, rgba(171, 171, 171, 1) 15%, rgba(171, 171, 171, 1) 35%, rgba(6, 139, 191, 1) 50%, rgba(171, 171, 171, 1) 65%, rgba(171, 171, 171, 1) 85%, rgba(6, 139, 191, 1) 100%);
     background-size: 200% 200%;
     animation-name: moving;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-delay: 0;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
