@@ -1,5 +1,9 @@
-let currentHour = new Date().getHours().toLocaleString();
-let currentMin = new Date().getMinutes().toLocaleString();
-let currentSec = new Date().getSeconds().toLocaleString();
+const date = new Date();
 
-console.log(currentHour , currentMin, currentSec);
+function currentTime(){
+    let hour = String(date.getHours()).padStart(2, '0');
+    let min = String(date.getMinutes()).padStart(2, '0');
+    return `${hour}:${min}`
+}
+
+document.getElementById('widget-time').innerText = (currentTime());
