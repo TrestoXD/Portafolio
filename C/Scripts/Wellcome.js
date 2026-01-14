@@ -1,4 +1,5 @@
 let debug = true;
+var windowmanager = localStorage.getItem('windowmanager')
 
 window.onload = function(){
     if(debug == true || !localStorage.getItem('visited')){
@@ -15,11 +16,12 @@ function WellcomeExe(){
     const mainDiv = document.createElement("div");
 
     mainDiv.classList.add("Window")
+    mainDiv.id = "Window"
     mainDiv.style.width = '500px';
     mainDiv.style.height= '250px';
     mainDiv.innerHTML = `
     <!-- THE MAIN TOP BAR -->
-        <div class="WTop-Bar"> 
+        <div class="WTop-Bar" id="WTop-Bar"> 
             <div> <p>Bienvenido</p> </div> 
             <div> 
                 <!--<button > <img src="./Styles/icons/minimize.svg" style="transform: translate(-50%, 50%);"> </button> 
@@ -42,6 +44,7 @@ function WellcomeExe(){
     document.body.insertBefore(mainDiv, currentDiv);
 
     RandomFact();
+    AddWindowManager();
 }
 
 function RandomFact(){
@@ -64,4 +67,20 @@ function RandomFact(){
     console.log(generatedFact)
 
     document.getElementById("welcomefact").innerText = generatedFact;
+}
+
+console.log(windowmanager)
+
+function AddWindowManager(){
+    if(windowmanager == null || windowmanager >= 0){
+        const script = document.createElement('script');
+        script.src = "./Scripts/windows.js";
+
+        document.getElementById("Process").appendChild(script);
+
+        localStorage.setItem('windowmanager', 1);
+    }
+    else{
+        localStorage.setItem('windowmanager', 0);
+    }
 }
