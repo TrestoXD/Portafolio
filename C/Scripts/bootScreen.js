@@ -9,5 +9,5 @@ if(debugmode == false){
 
 function StartOS(){
     console.log("OS initiated")
-    window.open("./C/Desktop.html", "_self")
+    window.open("../C/Desktop.html", "_self")
 }
