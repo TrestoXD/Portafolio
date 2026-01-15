@@ -13,23 +13,23 @@ window.onload = function(){
 
 
 function WellcomeExe(){
-    WindowExe(500, 250,`        
-        <div class="WTop-Bar" id="WTop-Bar"> 
-            <div> <p>Bienvenido</p> </div> 
-            <div> 
-                <!--<button > <img src="./Styles/icons/minimize.svg" style="transform: translate(-50%, 50%);"> </button> 
-                <button> <img src="./Styles/icons/maximize.svg"> </button> -->
-                <button style="margin-left:2px"> <img src="./Styles/icons/close.svg"> </button>
-            </div>   
-        </div>
-
+    WindowExe(500, 280, false,`        
         <div class="WContent" style="padding-left:20px; padding-right:20px; margin-top: 25px;"> 
-            <h1>Bienvenido a mi Portafolio</h1> 
-            <div class="WNotes" style="margin-top: 25px; margin-right:40px"> 
-                <div><img></div> 
-                <div> <b>Sabías que...</b> <p id="welcomefact">Texto...</p> </div>      
-            </div> 
-            <div>    </div>    
+            <h1>Bienvenido a mi Portafolio</h1>
+            <div class="Wsided-left"> 
+                <div class="WNotes" style="margin-top: 25px; margin-right:10px; width:300px"> 
+                    <div><img src="./Styles/icons/Welcome_Fact_95.svg" style="width: 50px"></div> 
+                    <div style="padding-top:20px"> <b>Sabías que...</b> <p id="welcomefact">Texto...</p> </div>      
+                </div>
+                <div style="margin-top: 25px; margin-right:10px;">
+                    <button class="button" style="padding:4px; width:100px"> Cerrar </button>
+                </div>
+            </div>
+            <div> 
+                <div style="padding-top: 20px">    
+                    Muestra esta pestaña cada vez que abres el Portafolio
+                </div>
+            </div>    
         </div>`
     );
     RandomFact();

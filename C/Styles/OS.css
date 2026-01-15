@@ -1,7 +1,7 @@
 /* 
     Este es el css para todo el "sistema operativo" a partir de la boot screen 
 
-    version 0.3
+    version 0.4
 
 */
 
@@ -71,6 +71,8 @@ h1{
 body{
     margin: 0;
     padding: 0;
+
+    overflow: hidden;
 }
 
 .loading-bar{
@@ -113,6 +115,15 @@ body{
     border-width: 2px;
     border-color: white black black white;
 }
+.button:active{
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    
+    background-color: #a0a0a4;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black white white black;
+}
 
 /* Barra de tareas */
 
@@ -132,6 +143,7 @@ body{
     border-style: solid;
     border-width: 2px 0px 0px 0px;
 
+    z-index: 9999999999999;
 }
 
 .Taskbar div{
@@ -319,11 +331,18 @@ body{
 }
 
 .WNotes{
-    padding: 10px;
+    display: flex;
+    gap: 30px;
+    padding: 30px;
 
     border-style: solid;
     border-width: 2px;
     border-color: #808080 white  white #808080;
 
     background-color: #feffdf;
+}
+
+.Wsided-left{
+    display: flex;
+
 }
