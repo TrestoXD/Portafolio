@@ -8,19 +8,12 @@ window.onload = function(){
         WellcomeExe();
         localStorage.setItem('visited', true);
     }
+    localStorage.setItem("totalsoft", 0)
 }
 
 
 function WellcomeExe(){
-
-    const mainDiv = document.createElement("div");
-
-    mainDiv.classList.add("Window")
-    mainDiv.id = "Window"
-    mainDiv.style.width = '500px';
-    mainDiv.style.height= '250px';
-    mainDiv.innerHTML = `
-    <!-- THE MAIN TOP BAR -->
+    WindowExe(500, 250,`        
         <div class="WTop-Bar" id="WTop-Bar"> 
             <div> <p>Bienvenido</p> </div> 
             <div> 
@@ -37,13 +30,10 @@ function WellcomeExe(){
                 <div> <b>Sabías que...</b> <p id="welcomefact">Texto...</p> </div>      
             </div> 
             <div>    </div>    
-        </div>
-    `
-
-    const currentDiv = document.getElementById("div1");
-    document.body.insertBefore(mainDiv, currentDiv);
-
+        </div>`
+    );
     RandomFact();
+    localStorage.setItem("totalsoft", localStorage.getItem("totalsoft")+1);
     AddWindowManager();
 }
 
@@ -51,7 +41,7 @@ function RandomFact(){
     let generatedFact = "";
     let generatedNum = 0;
 
-    let Facts = ['El fuego quema','Un rayo cósmico NO fue el causante del glitch en un speedrun de Mario 64','Las zapatillas se ponen en los pies','Cuando construyeron las pirámides de Egipto aún existían los mamuts'];
+    let Facts = ['El fuego quema','Un rayo cósmico NO fue el causante del glitch en un speedrun de Mario 64','Las zapatillas se ponen en los pies','Cuando construyeron las pirámides de Egipto aún existían los mamuts', ''];
 
     function getRandomInt(min,max){
         const mincel = Math.ceil(min);
@@ -74,7 +64,7 @@ console.log(windowmanager)
 function AddWindowManager(){
     if(windowmanager == null || windowmanager >= 0){
         const script = document.createElement('script');
-        script.src = "./Scripts/windows.js";
+        script.src = "./Scripts/WindowManager.js";
 
         document.getElementById("Process").appendChild(script);
 
