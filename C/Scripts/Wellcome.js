@@ -17,7 +17,7 @@ function WellcomeExe(){
         <div class="WContent" style="padding-left:20px; padding-right:20px; margin-top: 25px;"> 
             <h1>Bienvenido a mi Portafolio</h1>
             <div class="Wsided-left"> 
-                <div class="WNotes" style="margin-top: 25px; margin-right:10px; width:300px"> 
+                <div class="WNotes" style="margin-top: 25px; margin-right:10px; width:300px; height:100px"> 
                     <div><img src="./Styles/icons/Welcome_Fact_95.svg" style="width: 50px"></div> 
                     <div style="padding-top:20px"> <b>Sabías que...</b> <p id="welcomefact">Texto...</p> </div>      
                 </div>
@@ -26,8 +26,12 @@ function WellcomeExe(){
                 </div>
             </div>
             <div> 
-                <div style="padding-top: 20px">    
-                    Muestra esta pestaña cada vez que abres el Portafolio
+                <div style="display:flex; width:400px; align-items: center;"> 
+                    <label class="input">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>Muestra esta pestaña cada vez que abres el Portafolio</p>
                 </div>
             </div>    
         </div>`
