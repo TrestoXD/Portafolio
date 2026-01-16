@@ -153,11 +153,17 @@ body{
 
 .Checkmark{
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #000080;
+    font-size: 16px;
+    top: -4px;
+    left: 1px;
+    height: 16px;
+    width: 16px;
+    color: white;
+}
+
+.input input:checked ~ .Checkmark{
+    color: black;
+    content: '&#10004';
 }
 
 /* Barra de tareas */
@@ -284,6 +290,7 @@ body{
     border-style: solid;
     border-width: 2px;
     border-color: white black black white;
+ 
 }
 
 .WTop-Bar{

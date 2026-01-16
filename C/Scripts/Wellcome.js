@@ -22,16 +22,19 @@ function WellcomeExe(){
                     <div style="padding-top:20px"> <b>Sabías que...</b> <p id="welcomefact">Texto...</p> </div>      
                 </div>
                 <div style="margin-top: 25px; margin-right:10px;">
-                    <button class="button" style="padding:4px; width:100px"> Cerrar </button>
+                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=RandomFact()> Rotar Fact </button>
                 </div>
             </div>
-            <div> 
-                <div style="display:flex; width:400px; align-items: center;"> 
-                    <label class="input">
+            <div class="Wsided-left"> 
+                <div style="display:flex; width:372px; align-items: center;"> 
+                    <label class="input" style="margin-top:10px">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
+                        <span class="Checkmark">&#10004</span>
                     </label>
-                    <p>Muestra esta pestaña cada vez que abres el Portafolio</p>
+                    <p style="margin-top:16px">Muestra esta pestaña cada vez que abres el Portafolio</p>
+                </div>
+                <div>
+                    <button class="button" style="padding:4px; width:100px; margin-top:8px"> Cerrar </button>
                 </div>
             </div>    
         </div>`
@@ -45,7 +48,7 @@ function RandomFact(){
     let generatedFact = "";
     let generatedNum = 0;
 
-    let Facts = ['El fuego quema','Un rayo cósmico NO fue el causante del glitch en un speedrun de Mario 64','Las zapatillas se ponen en los pies','Cuando construyeron las pirámides de Egipto aún existían los mamuts', ''];
+    let Facts = ['El fuego quema','Un rayo cósmico NO fue el causante del glitch en un speedrun de Mario 64','Las zapatillas se ponen en los pies','Cuando construyeron las pirámides de Egipto aún existían los mamuts', 'Sabias que las gallinas pueden mantener su cabeza en un punto fijo?', 'Sabías que Cleopatra se lleva casi el mismo tiempo con la construcción de las pirámides que nosotros con ella?', 'sabias que las unicas partes del cuerpo que siguen creciendo son la nariz i las orejas'];
 
     function getRandomInt(min,max){
         const mincel = Math.ceil(min);
