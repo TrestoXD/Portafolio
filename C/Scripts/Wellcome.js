@@ -13,7 +13,7 @@ window.onload = function(){
 
 
 function WellcomeExe(){
-    WindowExe(500, 280, false,`        
+    WindowExe('Bienvenido',500, 280, null ,false,`        
         <div class="WContent" style="padding-left:20px; padding-right:20px; margin-top: 25px;"> 
             <h1>Bienvenido a mi Portafolio</h1>
             <div class="Wsided-left"> 
