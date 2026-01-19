@@ -2,7 +2,7 @@ let debug = true;
 var windowmanager = localStorage.getItem('windowmanager')
 
 window.onload = function(){
-    if(debug == true || !localStorage.getItem('visited')){
+    if(debug == true || localStorage.getItem('visited', false)){
         console.log("first Time")
         
         WellcomeExe();
@@ -10,7 +10,6 @@ window.onload = function(){
     }
     localStorage.setItem("totalsoft", 0)
 }
-
 
 function WellcomeExe(){
     WindowExe('Bienvenido',500, 280, null ,false,`        
@@ -29,7 +28,7 @@ function WellcomeExe(){
                 <div style="display:flex; width:372px; align-items: center;"> 
                     <label class="input" style="margin-top:10px">
                         <input type="checkbox">
-                        <span class="Checkmark">&#10004</span>
+                        <img class="Checkmark" src="./Styles/icons/checkmark-disabled.svg"></img>
                     </label>
                     <p style="margin-top:16px">Muestra esta pestaña cada vez que abres el Portafolio</p>
                 </div>
@@ -42,6 +41,21 @@ function WellcomeExe(){
     RandomFact();
     localStorage.setItem("totalsoft", localStorage.getItem("totalsoft")+1);
     AddWindowManager();
+}
+
+
+function SetupExe(){
+    WindowExe('Tresto Setup', 500, 120, null, false, `
+        <div style="display:flex; ">
+        <div> <img src="./Styles/icons/Warning.png" style="width:100px"> </div>
+        <div> 
+            <p> Setup has finished configuring the channel </p>
+            <p> You must upload a  new video before the new settings will take effect.</p>
+        </div>
+        </div>`
+    );
+
+    localStorage.setItem("totalsoft", localStorage.getItem("totalsoft")+1);
 }
 
 function RandomFact(){
