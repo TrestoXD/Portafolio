@@ -2,13 +2,15 @@ let debug = true;
 var windowmanager = localStorage.getItem('windowmanager')
 
 window.onload = function(){
+    localStorage.setItem('totalsoft', 0)
+    console.log("LocalStorage:",localStorage.getItem("totalsoft"));
+
     if(debug == true || localStorage.getItem('visited', false)){
         console.log("first Time")
         
         WellcomeExe();
         localStorage.setItem('visited', true);
     }
-    localStorage.setItem("totalsoft", 0)
 }
 
 function WellcomeExe(){

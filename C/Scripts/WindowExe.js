@@ -1,7 +1,12 @@
 function WindowExe(title, width, height, img ,maximizable, content){
     let icon;
+
+    //TotalWindows
+    localStorage.setItem("totalsoft", parseInt(localStorage.getItem('totalsoft'))+1)
+    console.log("LocalStorage-windowexe:",localStorage.getItem("totalsoft"));
+
     //Window
-    const mainDiv = document.createElement("div");
+    const mainDiv = document.createElement("div" + localStorage.getItem("totalsoft"));
 
     mainDiv.classList.add("Window")
     mainDiv.id = "Window"
