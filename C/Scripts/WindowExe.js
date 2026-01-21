@@ -6,12 +6,16 @@ function WindowExe(title, width, height, img ,maximizable, content){
     console.log("LocalStorage-windowexe:",localStorage.getItem("totalsoft"));
 
     //Window
-    const mainDiv = document.createElement("div" + localStorage.getItem("totalsoft"));
+    const mainDiv = document.createElement("win" + localStorage.getItem("totalsoft"));
 
     mainDiv.classList.add("Window")
     mainDiv.id = "Window"
     mainDiv.style.width = width + 'px';
     mainDiv.style.height= height + 'px';
+    mainDiv.style.right = (window.innerWidth / 3) + 'px';
+    mainDiv.style.bottom = (window.innerHeight / 3) + 'px';
+
+
     if( img == null){
         icon = null;
     }else{
@@ -27,7 +31,7 @@ function WindowExe(title, width, height, img ,maximizable, content){
                 <div> 
                     <button > <img src="./Styles/icons/minimize.svg" style="transform: translate(-50%, 50%);"> </button> 
                     <button> <img src="./Styles/icons/maximize.svg"> </button>
-                    <button style="margin-left:2px"> <img src="./Styles/icons/close.svg"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow()"> <img src="./Styles/icons/close.svg"> </button>
                 </div>   
             </div>` + content;
         }else{
@@ -37,7 +41,7 @@ function WindowExe(title, width, height, img ,maximizable, content){
                 <div> 
                     <button > <img src="./Styles/icons/minimize.svg" style="transform: translate(-50%, 50%);"> </button> 
                     <button> <img src="./Styles/icons/maximize.svg"> </button>
-                    <button style="margin-left:2px"> <img src="./Styles/icons/close.svg"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow()"> <img src="./Styles/icons/close.svg"> </button>
                 </div>   
             </div>` + content;
         }
@@ -47,7 +51,7 @@ function WindowExe(title, width, height, img ,maximizable, content){
             <div class="WTop-Bar" id="WTop-Bar"> 
                 <div> <p>${title}</p> </div> 
                 <div> 
-                    <button style="margin-left:2px"> <img src="./Styles/icons/close.svg"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow()"> <img src="./Styles/icons/close.svg"> </button>
                 </div>   
             </div>` + content;
         }else{
@@ -55,7 +59,7 @@ function WindowExe(title, width, height, img ,maximizable, content){
             <div class="WTop-Bar" id="WTop-Bar"> 
                 <div> <img src="${icon}"> <p>${title}</p> </div> 
                 <div> 
-                    <button style="margin-left:2px"> <img src="./Styles/icons/close.svg"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow()"> <img src="./Styles/icons/close.svg"> </button>
                 </div>   
             </div>` + content;
         }
