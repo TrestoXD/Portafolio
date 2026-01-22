@@ -1,4 +1,4 @@
-function WindowExe(title, width, height, img ,maximizable, content){
+function WindowExe(title, width, height, img ,maximizable, ontop, content){
     let icon;
 
     //TotalWindows
@@ -21,6 +21,12 @@ function WindowExe(title, width, height, img ,maximizable, content){
     }else{
         icon = './Styles/AppIcons/'+img+'.png';
         console.log(icon)
+    }
+
+    if(ontop == true){
+        mainDiv.style.zIndex = 999999;
+    } else{
+        mainDiv.style.zIndex = 1;
     }
 
     if(maximizable == true){
