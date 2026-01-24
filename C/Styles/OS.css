@@ -104,6 +104,11 @@ body{
 
     background-color: #008080;
     color: white;
+    -webkit-user-drag: none;
+}
+
+.Desktop img{
+    -webkit-user-drag: none;
 }
 
 .button{
@@ -413,6 +418,8 @@ body{
 
     transform: translate(-50%, -50%);
     width: 11px;
+
+    -webkit-user-drag:none;
 }
 
 .WContent{

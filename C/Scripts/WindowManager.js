@@ -1,23 +1,25 @@
 console.log("Window Manager Running")
 
 let Header = document.getElementById('WTop-Bar');
-let Windows = document.getElementById('Window');
+let Windows = document.getElementById('win1');
 let startX = 0, startY = 0, newX = 0, newY = 0;
 
 Header.addEventListener('mousedown', mouseDown);
 document.addEventListener('mouseup', mouseUp);
-document.addEventListener('mousedown', currentWindow);
 
 function mouseDown(e){
-    e.preventDefault();
+    if(e.target.id == 'WTop-Bar'){
+        e.preventDefault();
     
-    startX = e.clientX - Windows.getBoundingClientRect().left;
-    startY = e.clientY - Windows.getBoundingClientRect().top;
+        startX = e.clientX - Windows.getBoundingClientRect().left;
+        startY = e.clientY - Windows.getBoundingClientRect().top;
 
-    console.log("StartX", startX);
-    console.log("StartY", startY);
+        console.log("StartX", startX);
+        console.log("StartY", startY);
 
-    document.addEventListener('mousemove', mouseMove);
+        document.addEventListener('mousemove', mouseMove);
+    }
+    currentWindow(e);
 }
 
 function mouseMove(e){
@@ -36,12 +38,11 @@ function mouseUp(e){
 }
 
 function currentWindow(e){
-    console.log(e.target);
+    console.log(e.target.id);   
 }
 
-
-function closeWindow(){
-    console.log("cerrando...");
-
-
+function closeWindow(ides){
+    console.log(`cerrando... ` + ides)
+    document.getElementById('win'+ ides).outerHTML = ' ';
+    document.getElementById('btt'+ides).outerHTML = ' ';
 }

@@ -7,9 +7,11 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
 
     //Window
     const mainDiv = document.createElement("win" + localStorage.getItem("totalsoft"));
+    let id = "win" + localStorage.getItem("totalsoft");
+    console.log("el id es " + id)
 
     mainDiv.classList.add("Window")
-    mainDiv.id = "Window"
+    mainDiv.id = "win" + localStorage.getItem("totalsoft");
     mainDiv.style.width = width + 'px';
     mainDiv.style.height= height + 'px';
     mainDiv.style.right = (window.innerWidth / 3) + 'px';
@@ -37,7 +39,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
                 <div> 
                     <button > <img src="./Styles/icons/minimize.svg" style="transform: translate(-50%, 50%);"> </button> 
                     <button> <img src="./Styles/icons/maximize.svg"> </button>
-                    <button style="margin-left:2px" onclick="closeWindow()"> <img src="./Styles/icons/close.svg"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow("${localStorage.getItem("totalsoft")}")"> <img src="./Styles/icons/close.svg"> </button>
                 </div>   
             </div>` + content;
         }else{
@@ -47,7 +49,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
                 <div> 
                     <button > <img src="./Styles/icons/minimize.svg" style="transform: translate(-50%, 50%);"> </button> 
                     <button> <img src="./Styles/icons/maximize.svg"> </button>
-                    <button style="margin-left:2px" onclick="closeWindow()"> <img src="./Styles/icons/close.svg"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg"> </button>
                 </div>   
             </div>` + content;
         }
@@ -57,7 +59,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
             <div class="WTop-Bar" id="WTop-Bar"> 
                 <div> <p>${title}</p> </div> 
                 <div> 
-                    <button style="margin-left:2px" onclick="closeWindow()"> <img src="./Styles/icons/close.svg"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg"> </button>
                 </div>   
             </div>` + content;
         }else{
@@ -65,7 +67,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
             <div class="WTop-Bar" id="WTop-Bar"> 
                 <div> <img src="${icon}"> <p>${title}</p> </div> 
                 <div> 
-                    <button style="margin-left:2px" onclick="closeWindow()"> <img src="./Styles/icons/close.svg"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg"> </button>
                 </div>   
             </div>` + content;
         }
@@ -79,6 +81,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
     const mainButton = document.createElement("button");
 
     mainButton.classList.add('taskbar-button');
+    mainButton.id = 'btt' + localStorage.getItem("totalsoft");
     if(icon == null){
         mainButton.innerHTML = `<p>${title}</p>`
     }else{
