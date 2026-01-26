@@ -1,48 +1,53 @@
 console.log("Window Manager Running")
 
 let Header = document.getElementById('WTop-Bar');
-let Windows = document.getElementById('win1');
-let startX = 0, startY = 0, newX = 0, newY = 0;
 
-Header.addEventListener('mousedown', mouseDown);
-document.addEventListener('mouseup', mouseUp);
+for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
+    console.log("win"+i);
 
-function mouseDown(e){
-    if(e.target.id == 'WTop-Bar'){
-        e.preventDefault();
-    
-        startX = e.clientX - Windows.getBoundingClientRect().left;
-        startY = e.clientY - Windows.getBoundingClientRect().top;
+    let Windows = document.getElementById('win' + i);
+    let startX = 0, startY = 0, newX = 0, newY = 0;
 
-        console.log("StartX", startX);
-        console.log("StartY", startY);
+    Header.addEventListener('mousedown', mouseDown);
+    document.addEventListener('mouseup', mouseUp);
 
-        document.addEventListener('mousemove', mouseMove);
+    function mouseDown(e){
+        if(e.target.id == 'WTop-Bar'){
+            e.preventDefault();
+        
+            startX = e.clientX - Windows.getBoundingClientRect().left;
+            startY = e.clientY - Windows.getBoundingClientRect().top;
+
+            console.log("StartX", startX);
+            console.log("StartY", startY);
+
+            document.addEventListener('mousemove', mouseMove);
+        }
+        currentWindow(e);
     }
-    currentWindow(e);
-}
 
-function mouseMove(e){
-    e.preventDefault();
+    function mouseMove(e){
+        e.preventDefault();
 
-    newX = e.clientX - startX;
-    newY = e.clientY - startY;
+        newX = e.clientX - startX;
+        newY = e.clientY - startY;
 
-    Windows.style.top = (newY) + 'px';
-    Windows.style.left = (newX) + 'px';
-}
+        Windows.style.top = (newY) + 'px';
+        Windows.style.left = (newX) + 'px';
+    }
 
-function mouseUp(e){
-    console.log("MouseUp")
-    document.removeEventListener('mousemove', mouseMove);
-}
+    function mouseUp(e){
+        console.log("MouseUp")
+        document.removeEventListener('mousemove', mouseMove);
+    }
 
-function currentWindow(e){
-    console.log(e.target.id);   
-}
+    function currentWindow(e){
+        console.log(e.target.id);   
+    }
 
-function closeWindow(ides){
-    console.log(`cerrando... ` + ides)
-    document.getElementById('win'+ ides).outerHTML = ' ';
-    document.getElementById('btt'+ides).outerHTML = ' ';
+    function closeWindow(ides){
+        console.log(`cerrando... ` + ides)
+        document.getElementById('win'+ ides).outerHTML = ' ';
+        document.getElementById('btt'+ides).outerHTML = ' ';
+    }
 }

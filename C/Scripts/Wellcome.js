@@ -2,7 +2,7 @@ let debug = true;
 var windowmanager = localStorage.getItem('windowmanager')
 
 window.onload = function(){
-    localStorage.setItem('totalsoft', 0)
+    localStorage.setItem("totalsoft", 0)
     console.log("LocalStorage:",localStorage.getItem("totalsoft"));
 
     if(debug == true || localStorage.getItem('visited', false)){
@@ -41,7 +41,7 @@ function WellcomeExe(){
         </div>`
     );
     RandomFact();
-    localStorage.setItem("totalsoft", localStorage.getItem("totalsoft")+1);
+    localStorage.setItem("totalsoft", parseInt(localStorage.getItem('totalsoft'))+1)
     AddWindowManager();
 }
 
@@ -57,7 +57,7 @@ function SetupExe(){
         </div>`
     );
 
-    localStorage.setItem("totalsoft", localStorage.getItem("totalsoft")+1);
+     localStorage.setItem("totalsoft", parseInt(localStorage.getItem('totalsoft'))+1)
 }
 
 function RandomFact(){
