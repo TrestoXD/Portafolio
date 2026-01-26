@@ -172,6 +172,59 @@ body{
     filter: brightness(0);
 }
 
+#contextmenu{
+    position:absolute;
+    z-index: 999999999999999;
+
+    font-size: 14px;
+    padding: 2px;
+
+    color: black;
+    background-color: #c0c0c0;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;    
+
+    width: auto;
+    max-width: 200px;
+}
+
+#contextmenu > button{
+    width: 100%;
+
+    border: none;
+    
+    padding-top: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+    font-size: 14px;
+    white-space: nowrap;
+    background-color: transparent;
+
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#contextmenu > button > img{
+    width: 32px;
+
+    image-rendering: pixelated;
+    vertical-align: middle;
+}
+
+#contextmenu > button:hover{
+    color: white;
+    background-color: #000080;
+}
+#contextmenu > button:hover > img{
+    filter: invert();
+}
+
 /* Barra de tareas */
 
 .Taskbar{
