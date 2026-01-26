@@ -175,9 +175,9 @@ body{
 #contextmenu{
     position:absolute;
     z-index: 999999999999999;
+    padding: 2px;
 
     font-size: 14px;
-    padding: 2px;
 
     color: black;
     background-color: #c0c0c0;
@@ -220,9 +220,22 @@ body{
 #contextmenu > button:hover{
     color: white;
     background-color: #000080;
+
+    text-shadow: none;
 }
 #contextmenu > button:hover > img{
     filter: invert();
+}
+
+#contextmenu > hr {
+    border-width: 2px;
+    border-color: #808080 white white #808080;
+    border-style: solid;
+}
+
+.disabled{
+    color: #808080;
+    text-shadow: 1px 1px 0px white;
 }
 
 /* Barra de tareas */
