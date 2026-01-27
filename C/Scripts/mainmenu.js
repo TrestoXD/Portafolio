@@ -1,4 +1,5 @@
 
 function mainmenuExe(){
-    let menu = document.createElement("div");
+    console.log("opening menu...")
+    ContextmenuExe('0px','40px', true,false,'hi dnundindindiondpjdioasiodosijds');
 }

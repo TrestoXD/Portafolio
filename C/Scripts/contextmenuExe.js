@@ -1,7 +1,13 @@
-function ContextmenuExe(X, Y ,autohide, content){
+function ContextmenuExe(X, Y, Bottom, autohide, content){
     let menu = document.createElement("div")
     menu.id = "contextmenu"
-    menu.style = `top:${Y}; left:${X}`
+
+    if(Bottom == true){
+        menu.style = `bottom:${Y}; left:${X}`
+    }else{
+        menu.style = `top:${Y}; left:${X}`
+    }
+    
 
     if(menu.parentNode){
         menu.parentNode.removeChild(menu);

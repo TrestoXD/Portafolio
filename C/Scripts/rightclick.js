@@ -27,7 +27,7 @@ oncontextmenu = (e) => {
 
         console.log('la x es:'+ x)
 
-        ContextmenuExe(x +'px', y +'px', true, `
+        ContextmenuExe(x +'px', y +'px', false, true, `
         <button>Arrange Icons</Button>
         <Button>Line Up Icons</Button> <hr></hr> 
         <button class="disabled">Paste</button>
