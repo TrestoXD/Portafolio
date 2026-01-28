@@ -16,6 +16,10 @@ function ContextmenuExe(X, Y, Bottom, autohide, content){
     if(autohide == true){
         menu.onmouseleave = () => contextmenu.outerHTML = '', onmenu = false;    
     }else{
+        if(currentclick == 'contextmenu') {
+            console.log("en context")
+            menu.contextmenu.outerHTML = ''
+        }
     }
 
     menu.innerHTML = content;

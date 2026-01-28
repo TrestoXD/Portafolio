@@ -39,6 +39,10 @@ for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
     function mouseUp(e){
         console.log("MouseUp")
         document.removeEventListener('mousemove', mouseMove);
+        
+        currentclick = e.target.id;
+
+        console.log('elcurrentclick es:' + currentclick)
     }
 
     function currentWindow(e){

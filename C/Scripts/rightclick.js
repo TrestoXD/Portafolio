@@ -18,8 +18,7 @@ oncontextmenu = (e) => {
         //    <button class="disabled">Paste Shortcut</button>
         //    <button>Undo Delete</button> <hr></hr> 
         //    <button>New</button> <hr></hr> 
-        //    <button onclick='ErrorMenu("An err
-        // or message to annoy you.", "Context menu Failed")' class='textbutt'>Properties</button>`
+        //    <button onclick='ErrorMenu("An error message to annoy you.", "Context menu Failed")' class='textbutt'>Properties</button>`
         //document.body.appendChild(menu)
 
         let x = e.pageX
