@@ -14,11 +14,13 @@ for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
 
     function mouseDown(e){
         currentclick = e.target.id;
-        if(currentclick != "contextmenu") {
+        if(currentclick == "minmenu" | currentclick == "minmenus") {
             console.log("en context")
-
+        
+        }
+        else{
             try {
-                document.getElementById("contextmenu").outerHTML = ''   
+                document.getElementById("minmenu").outerHTML = ''   
                 
             } catch (error) {
                 console.log("no contextmenu exists")

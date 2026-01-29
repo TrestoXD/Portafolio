@@ -516,3 +516,25 @@ body{
     display: flex;
 
 }
+
+
+/*Start Menu*/
+
+
+#minmenu{
+    position:absolute;
+    z-index: 999999999999999;
+    padding: 2px;
+
+    font-size: 14px;
+
+    color: black;
+    background-color: #c0c0c0;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;    
+
+    width: auto;
+    max-width: 200px;
+}
