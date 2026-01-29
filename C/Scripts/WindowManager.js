@@ -8,10 +8,29 @@ for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
     let Windows = document.getElementById('win' + i);
     let startX = 0, startY = 0, newX = 0, newY = 0;
 
-    Header.addEventListener('mousedown', mouseDown);
+    Header.addEventListener('mousedown', mouseDownHeader);
     document.addEventListener('mouseup', mouseUp);
+    document.addEventListener('mousedown', mouseDown)
 
     function mouseDown(e){
+        currentclick = e.target.id;
+        if(currentclick != "contextmenu") {
+            console.log("en context")
+
+            try {
+                document.getElementById("contextmenu").outerHTML = ''   
+                
+            } catch (error) {
+                console.log("no contextmenu exists")
+            }
+        }
+    }
+
+    function mouseDownHeader(e){
+
+        currentclick = e.target.id;
+        console.log('elcurrentclick es: ' + currentclick)
+
         if(e.target.id == 'WTop-Bar'){
             e.preventDefault();
         
@@ -23,7 +42,6 @@ for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
 
             document.addEventListener('mousemove', mouseMove);
         }
-        currentWindow(e);
     }
 
     function mouseMove(e){
@@ -39,14 +57,12 @@ for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
     function mouseUp(e){
         console.log("MouseUp")
         document.removeEventListener('mousemove', mouseMove);
-        
-        currentclick = e.target.id;
-
-        console.log('elcurrentclick es:' + currentclick)
     }
 
     function currentWindow(e){
-        console.log(e.target.id);   
+        console.log(e.target.id);
+        
+        localStorage.setItem('currentclick', e.target.id);
     }
 
     function closeWindow(ides){
