@@ -163,7 +163,8 @@ body{
     left: 0px;
     height: 14px;
     width: 14px;
-    filter: brightness(100);
+    filter: brightness(1.75);
+    text-shadow: 1px 1px 0px white;
 }
 
 .input input:checked ~ .Checkmark{
@@ -537,4 +538,55 @@ body{
 
     width: auto;
     max-width: 200px;
+    width: 200px;
+}
+
+#minmenu img{
+
+    display: block;    
+}
+
+#minmenu div button{
+    border: none;
+    background-color: transparent;
+    text-align: start;
+
+    height: 40.25px;
+
+    display: flex;
+        gap: 4px;
+        vertical-align: middle;
+
+    align-items: center;
+}
+
+#minmenu div button img{
+    display: flex;
+
+    position: relative;
+    height: 30px;
+    vertical-align: middle;
+}
+
+#minmenu div button:hover{
+    background-color: #000080;
+    color: white;
+}
+
+#minmenu div hr{
+    border-width: 2px;
+    border-color: #808080 white white #808080;
+    border-style: solid;
+
+    width: 95%;
+}
+
+.arrow{
+    width: 20px;
+    position: absolute;
+    right: 0;
+}
+
+#minmenu div button:hover .arrow{
+    filter: invert();
 }
