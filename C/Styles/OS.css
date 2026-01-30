@@ -551,7 +551,7 @@ body{
     background-color: transparent;
     text-align: start;
 
-    height: 40.25px;
+    height: 40.45px;
 
     display: flex;
         gap: 4px;
@@ -581,12 +581,55 @@ body{
     width: 95%;
 }
 
+#minmenu div button:hover .arrow{
+    filter: invert();
+}
+
+#secmenu{
+    position:absolute;
+    z-index: 999999999999999;
+    padding: 2px;
+
+    font-size: 14px;
+
+    color: black;
+    background-color: #c0c0c0;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;    
+
+    width: auto;
+    max-width: 200px;
+    width: 200px;
+}
+#secmenu button{
+    border: none;
+    background-color: transparent;
+    text-align: start;
+
+    height: 25px;
+
+    display: flex;
+    gap: 4px;
+    vertical-align: middle;
+
+    align-items: center;
+    width: 100%;
+}
+
+#secmenu button:hover{
+    background-color: #000080;
+    color: white;
+}
+
+#secmenu button:hover .arrow{
+    filter: invert();
+}
+
 .arrow{
     width: 20px;
     position: absolute;
     right: 0;
 }
 
-#minmenu div button:hover .arrow{
-    filter: invert();
-}
