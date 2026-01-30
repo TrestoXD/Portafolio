@@ -23,7 +23,7 @@ for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
         else{
             try {
                 document.getElementById("minmenu").outerHTML = ''   
-                
+                document.getElementById("secmenu").outerHTML = ''
             } catch (error) {
                 console.log("no contextmenu exists")
             }

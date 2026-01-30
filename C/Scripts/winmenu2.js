@@ -19,12 +19,29 @@ function MainmenusecExe(X, Y, Bottom, autohide, content){
         }
 
         if(autohide == true){
-            menu.onmouseleave = () => secmenu.outerHTML = '', onmenu = false;    
+            menu.onmouseleave = () => secmenu.outerHTML = '', onmenu = false; 
         }else{
         }
         menu.innerHTML = content;
         document.body.appendChild(menu)
     }else{
+        if(Bottom == true){
+            elementmenu.style = `bottom:${Y}; left:${X}`
+        }else{
+            elementmenu.style = `top:${Y}; left:${X}`
+        }
+
         elementmenu.innerHTML = content;
     }
+}
+
+function Delete_MainmenusecExe(){
+    let elementmenu = document.getElementById("secmenu");
+
+    try {
+        elementmenu.outerHTML = ''
+    } catch (error) {
+        
+    }
+
 }

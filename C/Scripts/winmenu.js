@@ -1,3 +1,5 @@
+let elementmenu = document.getElementById("secmenu");
+
 function MainmenuExe(X, Y, Bottom, autohide, content){
     let menu = document.createElement("div")
     menu.id = "minmenu"
@@ -14,7 +16,8 @@ function MainmenuExe(X, Y, Bottom, autohide, content){
     }
 
     if(autohide == true){
-        menu.onmouseleave = () => contextmenu.outerHTML = '', onmenu = false;    
+        menu.onmouseleave = () => contextmenu.outerHTML = '', onmenu = false, elementmenu.innerHTML = '';  
+        
     }else{
     }
 
