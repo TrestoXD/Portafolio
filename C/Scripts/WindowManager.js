@@ -2,6 +2,8 @@ console.log("Window Manager Running")
 
 let Header = document.getElementById('WTop-Bar');
 
+const ClickSound = new Audio("");
+
 for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
     console.log("win"+i);
 
@@ -44,6 +46,7 @@ for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
 
             document.addEventListener('mousemove', mouseMove);
         }
+        ClickSound.play();
     }
 
     function mouseMove(e){

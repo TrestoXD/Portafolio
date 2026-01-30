@@ -7,10 +7,10 @@ function mainmenuExe(){
                 <img src="./Styles/icons/sidebar95.png" id="minmenus" style="height:200px; ">
             </div>
             <div style="display:flex; flex-direction:column; width:100%;">
-                <button onmouseenter="MainmenusecExe('200px','166px',true,true, '${Programs_Menu}')"> <img src="./Styles/icons/directory_program_group.ico"> <p>Programas</p> <img class="arrow" src="./Styles/icons/Arrow.ico"> </button>
-                <button onmouseenter="MainmenusecExe('200px','166px',true,true, '${Documentos_Menu}')"> <img src="./Styles/icons/documents_normal.ico"> <p>Documentos</p> <img class="arrow" src="./Styles/icons/Arrow.ico"> </button>
-                <button> <img src="./Styles/icons/settings_gear.ico" style="scale:1.5;"> <p>Configuración</p> <img class="arrow" src="./Styles/icons/Arrow.ico"> </button>
-                <button> <img src="./Styles/icons/search_file.ico"> <p>Encuentrame</p> <img class="arrow" src="./Styles/icons/Arrow.ico"> </button>
+                <button onmouseenter="MainmenusecExe('200px','calc(100% - 350px)',false,true, '${Programs_Menu}')"> <img src="./Styles/icons/directory_program_group.ico"> <p>Programas</p> <img class="arrow" src="./Styles/icons/Arrow.ico"> </button>
+                <button onmouseenter="MainmenusecExe('200px','calc(100% - 350px)',false,true, '${Documentos_Menu}')"> <img src="./Styles/icons/documents_normal.ico"> <p>Documentos</p> <img class="arrow" src="./Styles/icons/Arrow.ico"> </button>
+                <button onmouseenter="MainmenusecExe('200px','calc(100% - 350px)',false,true, '${Settings_Menu}')"> <img src="./Styles/icons/settings_gear.ico" style="scale:1.5;"> <p>Configuración</p> <img class="arrow" src="./Styles/icons/Arrow.ico"> </button>
+                <button onmouseenter="MainmenusecExe('200px','calc(100% - 350px)',false,true, '${Find_Menu}')"> <img src="./Styles/icons/search_file.ico"> <p>Buscar</p> <img class="arrow" src="./Styles/icons/Arrow.ico"> </button>
                 <button> <img src="./Styles/icons/help_book_big.ico"> <p>Ayuda</p></button>
                 <button> <img src="./Styles/icons/application_hourglass.ico"> <p>Ejecuta</p></button>
                 <hr>
