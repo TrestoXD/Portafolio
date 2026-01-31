@@ -20,6 +20,13 @@ function MainmenusecExe(X, Y, Bottom, autohide, content){
 
         if(autohide == true){
             menu.onmouseleave = () => secmenu.outerHTML = '', onmenu = false; 
+            
+            if(document.getElementById("minmenu").onmouseenter && document.getElementById("secmenu").onmouseenter){ 
+                console.log("hm")
+            }else{
+                try{secmenu.outerHTML = ''}
+                catch(error){console.log("no secmenu")}
+            }                
         }else{
         }
         menu.innerHTML = content;
