@@ -627,6 +627,11 @@ body{
     filter: invert();
 }
 
+#secmenu button img{
+    max-height: 20px;
+
+}
+
 .arrow{
     width: 20px;
     position: absolute;
