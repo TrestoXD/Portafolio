@@ -14,11 +14,11 @@ window.onload = function(){
 }
 
 function WellcomeExe(){
-    WindowExe('Bienvenido',500, 280, null ,false, false,`        
+    WindowExe('Bienvenido',500, 350, null ,false, false,`        
         <div class="WContent" style="padding-left:20px; padding-right:20px; margin-top: 25px;"> 
             <h1>Bienvenido a mi Portafolio</h1>
             <div class="Wsided-left"> 
-                <div class="WNotes" style="margin-top: 25px; margin-right:10px; width:300px; height:100px"> 
+                <div class="WNotes" style="margin-top: 25px; margin-right:10px; width:300px; height:160px"> 
                     <div><img src="./Styles/icons/Welcome_Fact_95.svg" style="width: 50px"></div> 
                     <div style="padding-top:20px"> <b>Sabías que...</b> <p id="welcomefact">Texto...</p> </div>      
                 </div>
@@ -64,7 +64,7 @@ function RandomFact(){
     let generatedFact = "";
     let generatedNum = 0;
 
-    let Facts = ['El fuego quema','Un rayo cósmico NO fue el causante del glitch en un speedrun de Mario 64','Las zapatillas se ponen en los pies','Cuando construyeron las pirámides de Egipto aún existían los mamuts', 'Sabias que las gallinas pueden mantener su cabeza en un punto fijo?', 'Sabías que Cleopatra se lleva casi el mismo tiempo con la construcción de las pirámides que nosotros con ella?', 'sabias que las unicas partes del cuerpo que siguen creciendo son la nariz i las orejas'];
+    let Facts = ['El fuego quema','Un rayo cósmico NO fue el causante del glitch en un speedrun de Mario 64','Las zapatillas se ponen en los pies','Cuando construyeron las pirámides de Egipto aún existían los mamuts', 'Sabias que las gallinas pueden mantener su cabeza en un punto fijo?', 'Sabías que Cleopatra se lleva casi el mismo tiempo con la construcción de las pirámides que nosotros con ella?', 'sabias que las unicas partes del cuerpo que siguen creciendo son la nariz i las orejas', 'Un acto sincero de bondad, siempre provoca otro.', 'Un Gran Poder Conlleva Una Gran Responsabilidad', 'Eso es todo, UN SALTO DE FE','Sea cual sea la adversidad que se nos presente, la batalla que ruja en nuestro interior, siempre tenemos Elección y siempre podemos optar por hacer lo correcto', 'Tus decisiones... Tus acciones... Eso es lo que te define', 'Los sueños nos salva. Los sueños nos elevan y nos transforman y por mi alma juro que hasta que mi sueño de un mundo donde la dignidad, el honor y la justicia se convierta en la realidad que todos compartimos, nunca dejaré de luchar.'];
 
     function getRandomInt(min,max){
         const mincel = Math.ceil(min);
