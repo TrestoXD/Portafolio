@@ -12,22 +12,23 @@ for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
 
     Header.addEventListener('mousedown', mouseDownHeader);
     document.addEventListener('mouseup', mouseUp);
-    document.addEventListener('mousedown', mouseDown)
+    document.addEventListener('mousedown', mouseDown);
 
     function mouseDown(e){
         currentclick = e.target.id;
-        if(currentclick == "minmenu" | currentclick == "minmenus") {
+        if(e.target.id == "minmenu" | e.target.id == "minmenus" | e.target.id == "secmenu") {
             console.log("en context")
         
         }
-        else{
-            try {
-                document.getElementById("minmenu").outerHTML = ''   
-                document.getElementById("secmenu").outerHTML = ''
-            } catch (error) {
-                console.log("no contextmenu exists")
-            }
-        }
+        //else{
+        //    try {
+        //        document.getElementById("minmenu").outerHTML = ''   
+        //        document.getElementById("secmenu").outerHTML = ''   
+        //    } catch (error) {
+        //        console.log("no contextmenu exists")
+        //    }
+        //}
+        ClickSound.play();
     }
 
     function mouseDownHeader(e){
@@ -46,7 +47,6 @@ for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
 
             document.addEventListener('mousemove', mouseMove);
         }
-        ClickSound.play();
     }
 
     function mouseMove(e){
