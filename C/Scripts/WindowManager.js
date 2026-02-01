@@ -1,12 +1,11 @@
 console.log("Window Manager Running")
 
-let Header = document.getElementById('WTop-Bar');
-
 const ClickSound = new Audio("");
 
 for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
     console.log("win"+i);
 
+    let Header = document.getElementById('WTop-Bar' + i);
     let Windows = document.getElementById('win' + i);
     let startX = 0, startY = 0, newX = 0, newY = 0;
 
@@ -36,7 +35,7 @@ for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
         currentclick = e.target.id;
         console.log('elcurrentclick es: ' + currentclick)
 
-        if(e.target.id == 'WTop-Bar'){
+        if(e.target.id == 'WTop-Bar' + i){
             e.preventDefault();
         
             startX = e.clientX - Windows.getBoundingClientRect().left;

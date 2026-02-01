@@ -7,11 +7,12 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
 
     //Window
     const mainDiv = document.createElement("win" + localStorage.getItem("totalsoft"));
-    let id = "win" + localStorage.getItem("totalsoft");
-    console.log("el id es " + id)
+    let ide = "win" + localStorage.getItem("totalsoft");
+    let top = "WTop-Bar" + localStorage.getItem("totalsoft");
+    console.log("el id es " + ide)
 
     mainDiv.classList.add("Window")
-    mainDiv.id = "win" + localStorage.getItem("totalsoft");
+    mainDiv.id = ide;
     mainDiv.style.width = width + 'px';
     mainDiv.style.height= height + 'px';
     mainDiv.style.right = (window.innerWidth / 3) + 'px';
@@ -34,7 +35,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
     if(maximizable == true){
         if(icon == null){
             mainDiv.innerHTML = `        
-            <div class="WTop-Bar" id="WTop-Bar"> 
+            <div class="WTop-Bar" id="${top}"> 
                 <div><p>${title}</p> </div> 
                 <div> 
                     <button > <img src="./Styles/icons/minimize.svg" style="transform: translate(-50%, 50%);"> </button> 
@@ -44,7 +45,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
             </div>` + content;
         }else{
             mainDiv.innerHTML = `        
-            <div class="WTop-Bar" id="WTop-Bar"> 
+            <div class="WTop-Bar" id="${top}"> 
                 <div> <img src="${icon}" class="icon"> <p>${title}</p> </div> 
                 <div> 
                     <button > <img src="./Styles/icons/minimize.svg" style="transform: translate(-50%, 50%);"> </button> 
@@ -56,7 +57,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
     } else{
         if(icon == null){
             mainDiv.innerHTML = `        
-            <div class="WTop-Bar" id="WTop-Bar"> 
+            <div class="WTop-Bar" id="${top}"> 
                 <div> <p>${title}</p> </div> 
                 <div> 
                     <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg"> </button>
@@ -64,7 +65,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
             </div>` + content;
         }else{
             mainDiv.innerHTML = `        
-            <div class="WTop-Bar" id="WTop-Bar"> 
+            <div class="WTop-Bar" id="${top}"> 
                 <div> <img src="${icon}"> <p>${title}</p> </div> 
                 <div> 
                     <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg"> </button>
