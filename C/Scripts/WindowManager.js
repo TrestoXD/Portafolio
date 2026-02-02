@@ -23,14 +23,15 @@ function mouseDown(e){
             idee = e.target.id 
             mouseDownHeader(e);
         }
-        //else{
-        //    try {
-        //        document.getElementById("minmenu").outerHTML = ''   
-        //        document.getElementById("secmenu").outerHTML = ''   
-        //    } catch (error) {
-        //        console.log("no contextmenu exists")
-        //    }
-        //}
+        else{
+            console.log(e.target)
+            try {
+                document.getElementById("minmenu").outerHTML = ''   
+                //document.getElementById("secmenu").outerHTML = ''   
+            } catch (error) {
+                console.log("no contextmenu exists")
+            }
+        }
         //ClickSound.play();
 }
 
