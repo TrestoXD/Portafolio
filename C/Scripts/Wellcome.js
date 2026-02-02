@@ -41,8 +41,7 @@ function WellcomeExe(){
         </div>`
     );
     RandomFact();
-    localStorage.setItem("totalsoft", parseInt(localStorage.getItem('totalsoft'))+1)
-    AddWindowManager();
+        Recharge();
 }
 
 
@@ -56,8 +55,6 @@ function SetupExe(){
         </div>
         </div>`
     );
-
-     localStorage.setItem("totalsoft", parseInt(localStorage.getItem('totalsoft'))+1)
 }
 
 function RandomFact(){

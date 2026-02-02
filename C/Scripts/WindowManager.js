@@ -1,15 +1,18 @@
 console.log("Window Manager Running")
+let i = 1;
 
 const ClickSound = new Audio("");
 
-for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
+function Recharge(){
+    Header = document.getElementById('WTop-Bar' + localStorage.getItem("totalsoft")).addEventListener('mousedown', mouseDownHeader);;
+    console.log("Recharged")
+}
+for (i; i <= localStorage.getItem("totalsoft"); i++) {
     console.log("win"+i);
 
-    let Header = document.getElementById('WTop-Bar' + i);
     let Windows = document.getElementById('win' + i);
     let startX = 0, startY = 0, newX = 0, newY = 0;
 
-    Header.addEventListener('mousedown', mouseDownHeader);
     document.addEventListener('mouseup', mouseUp);
     document.addEventListener('mousedown', mouseDown);
 
@@ -27,7 +30,7 @@ for (let i = 1; i < localStorage.getItem("totalsoft"); i++) {
         //        console.log("no contextmenu exists")
         //    }
         //}
-        ClickSound.play();
+        //ClickSound.play();
     }
 
     function mouseDownHeader(e){

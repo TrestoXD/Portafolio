@@ -89,4 +89,5 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
         mainButton.innerHTML = `<img src="${icon}"> <p>${title}</p>`
     }
     currentTaskbar.insertAdjacentElement('beforeend', mainButton)
+
 }
