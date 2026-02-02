@@ -8,7 +8,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
     //Window
     const mainDiv = document.createElement("win" + localStorage.getItem("totalsoft"));
     let ide = "win" + localStorage.getItem("totalsoft");
-    let top = "WTop-Bar" + localStorage.getItem("totalsoft");
+    let top = localStorage.getItem("totalsoft");
     console.log("el id es " + ide)
 
     mainDiv.classList.add("Window")

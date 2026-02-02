@@ -41,7 +41,7 @@ function WellcomeExe(){
         </div>`
     );
     RandomFact();
-        Recharge();
+    //Recharge();
 }
 
 
