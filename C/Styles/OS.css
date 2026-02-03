@@ -639,8 +639,8 @@ body{
 }
 
 .notepad{
-    overflow-y: scroll;
-    overflow-x: scroll;
+    padding-right: 6px;
+    padding-left: 2px;
 }
 
 .notepad button{
@@ -655,8 +655,15 @@ body{
 
 .notepad div{
 
+    width: 100%;
+    height: auto;
+
+    overflow-y: scroll;
+    overflow-x: scroll;
+
     background-color: white;
-    border-color: black white white black;
+    border-style: solid;
+    border-color: white black black white;
     border-width: 2px;
 
 }
