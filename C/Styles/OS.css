@@ -8,8 +8,54 @@
 html{
     margin: 0;
     padding: 0;
+}
 
+::-webkit-scrollbar {
+    color: #000080;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  padding: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+    background: #c0c0c0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white black black white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:active {
+    background: #a0a0a4;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black white white black;
+}
+
+::-webkit-scrollbar-button{
+    background: #c0c0c0;
+    color: black;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: white black black white;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement{
+    background-image: url("./icons/button-up.svg");
+}
+::-webkit-scrollbar-button:single-button:vertical:increment{
+    background-image: url("./icons/button-down.svg");
+}
+::-webkit-scrollbar-button:single-button:horizontal:decrement{
+    background-image: url("./icons/button-left.svg");
+}
+::-webkit-scrollbar-button:single-button:horizontal:increment{
+    background-image: url("./icons/button-right.svg");
 }
 
 *{
@@ -663,7 +709,7 @@ body{
 
     background-color: white;
     border-style: solid;
-    border-color: white black black white;
+    border-color: black white white black;
     border-width: 2px;
 
 }
