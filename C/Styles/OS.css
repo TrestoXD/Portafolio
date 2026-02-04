@@ -12,6 +12,8 @@ html{
 
 ::-webkit-scrollbar {
     color: #000080;
+    width: 20px;
+    height: 20px;
 }
 
 /* Track */
@@ -25,7 +27,7 @@ html{
 
     background: #c0c0c0;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-color: white black black white;
 }
 
@@ -33,7 +35,6 @@ html{
 ::-webkit-scrollbar-thumb:active {
     background: #a0a0a4;
     border-style: solid;
-    border-width: 1px;
     border-color: black white white black;
 }
 
@@ -44,18 +45,25 @@ html{
     border-style: solid;
     border-width: 1px;
     border-color: white black black white;
+
+    width: 20px;
+    height: 20px;
 }
 ::-webkit-scrollbar-button:single-button:vertical:decrement{
     background-image: url("./icons/button-up.svg");
+    background-size: cover;
 }
 ::-webkit-scrollbar-button:single-button:vertical:increment{
     background-image: url("./icons/button-down.svg");
+    background-size: cover;
 }
 ::-webkit-scrollbar-button:single-button:horizontal:decrement{
     background-image: url("./icons/button-left.svg");
+    background-size: cover;
 }
 ::-webkit-scrollbar-button:single-button:horizontal:increment{
     background-image: url("./icons/button-right.svg");
+    background-size: cover;
 }
 
 *{
