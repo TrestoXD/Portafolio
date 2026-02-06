@@ -58,7 +58,7 @@
 .Command-prompt span{
     font-family: CMD;
     color: white;
-    word-spacing: -1px;
+    word-spacing: -2px;
 }
 .Command-prompt input{
     max-width: 10em;

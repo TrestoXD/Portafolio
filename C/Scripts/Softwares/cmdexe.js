@@ -10,11 +10,13 @@ function CmdEXE(){
     
     </div>
         `)
-    document.getElementById('inputcommand').addEventListener('keypress',CMDINPUT(e));
+    document.getElementById('inputcommand').addEventListener('keypress',CMDINPUT);
 }
 
 function CMDINPUT(e){
-    if(e.keycode==13){
-        console.log("enter pressed")
+    if(e.keycode === 13 || e.key === 'Enter'){
+        console.log("enter pressed");
+
+        //Comandos!
     } 
 }
