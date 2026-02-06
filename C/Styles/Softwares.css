@@ -1,0 +1,72 @@
+@font-face {
+    font-family: CMD;
+    src: url("./clacon2.ttf");
+}
+
+/* NOTEPAD */
+
+.notepad{
+    padding-right: 6px;
+    padding-left: 2px;
+}
+
+.notepad button{
+    border: none;
+    background-color: transparent;
+}
+
+.notepad button:hover{
+    color: white;
+    background-color: #000080;
+}
+
+.notepad div{
+
+    width: 100%;
+    height: auto;
+
+    overflow-y: scroll;
+    overflow-x: scroll;
+
+    background-color: white;
+    border-style: solid;
+    border-color: black white white black;
+    border-width: 2px;
+
+}
+
+
+/* CMD */
+
+.Command-prompt{
+    font-family: CMD;
+    padding: 10px;
+
+    height: calc(100% - 46px);
+
+    background-color: black;
+    display: block;
+
+    gap: 0;
+    margin: 0;
+}
+.Command-prompt p {
+    font-family: CMD;
+    color: white;
+    line-height: 0;
+}
+.Command-prompt span{
+    font-family: CMD;
+    color: white;
+    word-spacing: -1px;
+}
+.Command-prompt input{
+    max-width: 10em;
+    border:none;
+    background-color: transparent;
+
+    color: white;
+}
+.Command-prompt input:focus{
+    outline: none;
+}

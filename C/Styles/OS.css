@@ -691,33 +691,3 @@ body{
     position: absolute;
     right: 0;
 }
-
-.notepad{
-    padding-right: 6px;
-    padding-left: 2px;
-}
-
-.notepad button{
-    border: none;
-    background-color: transparent;
-}
-
-.notepad button:hover{
-    color: white;
-    background-color: #000080;
-}
-
-.notepad div{
-
-    width: 100%;
-    height: auto;
-
-    overflow-y: scroll;
-    overflow-x: scroll;
-
-    background-color: white;
-    border-style: solid;
-    border-color: black white white black;
-    border-width: 2px;
-
-}
