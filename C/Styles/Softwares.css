@@ -42,18 +42,25 @@
     font-family: CMD;
     padding: 10px;
 
-    height: calc(100% - 46px);
+    height: calc(100% - 26px);
+    box-sizing: border-box;
 
     background-color: black;
     display: block;
 
     gap: 0;
     margin: 0;
+
+    overflow-y:auto;
+    overflow-x:auto;
 }
 .Command-prompt p {
     font-family: CMD;
     color: white;
-    line-height: 0;
+    line-height: 1;
+
+    word-break:normal;
+    height: auto;
 }
 .Command-prompt span{
     font-family: CMD;
@@ -61,11 +68,13 @@
     word-spacing: -2px;
 }
 .Command-prompt input{
-    max-width: 10em;
-    border:none;
+    border: none;
     background-color: transparent;
 
     color: white;
+
+    box-sizing: border-box;
+    width: 70%;
 }
 .Command-prompt input:focus{
     outline: none;
