@@ -91,3 +91,5 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
     currentTaskbar.insertAdjacentElement('beforeend', mainButton)
 
 }
+
+//Nota: Una ventana tendría que tratarse como un objeto separado, con métodos para saber su id, estado, etc. Así podría funcionar el botón de "Cerrar" en el "Bienvenido"
