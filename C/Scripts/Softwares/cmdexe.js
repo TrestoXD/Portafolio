@@ -2,15 +2,16 @@
 
 function CmdEXE(){
     WindowExe('COMMAND PROMPT', 400, 200, 'ms_dos-1', true, true, `
-    <div class="Command-prompt" id="Commandprompt"> 
+    <div class="Command-prompt" id="Commandprompt" onclick="document.getElementById('inputcommand').focus()"> 
     
     <p>Vito Minaya González CC0 1.0 Universal</p>
     
-    <span> C : \ Verse > </span><input type="text" id="inputcommand"> 
+    <span> C : \ Verse > </span><input type="text" id="inputcommand" autocomplete="off"> 
     
     </div>
         `)
     document.getElementById('inputcommand').addEventListener('keypress',CMDINPUT);
+    document.getElementById('inputcommand').focus();
 }
 
 function CMDINPUT(e){
@@ -20,21 +21,28 @@ function CMDINPUT(e){
 
         let result = document.createElement("div")
 
-        console.log(document.getElementById('inputcommand').value);
+        commandValue = document.getElementById('inputcommand').value;
+
+        console.log(commandValue);
+
+        let newPrompt = document.createElement("div");
 
         //Comandos!
-        if(document.getElementById('inputcommand').value == ""){
+        if(commandValue == ""){
             result.innerHTML = `<span> C : \ Verse > </span><input type="text" id="inputcommand">`
             document.getElementById('inputcommand').outerHTML = '';
         }else{
             result.innerHTML = `
-            <p> ${document.getElementById('inputcommand').value} is not recognized has an internal or external command. </p>
-            <span> C : \ Verse > </span><input type="text" id="inputcommand">`
+            <p> ${commandValue} is not recognized as an internal or external command. </p>`
 
-            document.getElementById('inputcommand').outerHTML = '';
+            newPrompt.innerHTML = `<span> C : \ Verse > </span><input type="text" id="inputcommand">`
+            document.getElementById('inputcommand').outerHTML = `<span>${commandValue}</span>`; 
         }
 
         CMDOUTPUT.appendChild(result)
+        CMDOUTPUT.appendChild(newPrompt)
         document.getElementById('inputcommand').addEventListener('keypress',CMDINPUT);
+
+        document.getElementById('inputcommand').focus();
     } 
 }
