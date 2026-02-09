@@ -28,10 +28,24 @@ function CMDINPUT(e){
         let newPrompt = document.createElement("div");
 
         //Comandos!
+
+        //Comando default
         if(commandValue == ""){
             result.innerHTML = `<span> C : \ Verse > </span><input type="text" id="inputcommand">`
             document.getElementById('inputcommand').outerHTML = '';
-        }else{
+        }
+
+        //Borrate la cuenta
+        else if (commandValue == "borrate la cuenta"){
+            result.innerHTML = `
+            <p> Borratela tú. </p>`
+
+            newPrompt.innerHTML = `<span> C : \ Verse > </span><input type="text" id="inputcommand">`
+            document.getElementById('inputcommand').outerHTML = `<span>${commandValue}</span>`; 
+        }
+
+        //Comando no reconozido
+        else{
             result.innerHTML = `
             <p> ${commandValue} is not recognized as an internal or external command. </p>`
 
