@@ -38,9 +38,9 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
             <div class="WTop-Bar" id="${top}"> 
                 <div><p>${title}</p> </div> 
                 <div> 
-                    <button onclick="minimizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/minimize.svg"> </button> 
-                    <button onclick="maximizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/maximize.svg"> </button>
-                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg"> </button>
+                    <button onclick="minimizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/minimize.svg" alt="0"> </button> 
+                    <button onclick="maximizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/maximize.svg" alt="1"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg" alt="r"> </button>
                 </div>   
             </div>` + content;
         }else{
@@ -48,9 +48,9 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
             <div class="WTop-Bar" id="${top}"> 
                 <div> <img src="${icon}" class="icon"> <p>${title}</p> </div> 
                 <div> 
-                    <button onclick="minimizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/minimize.svg"> </button> 
-                    <button onclick="maximizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/maximize.svg"> </button>
-                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg"> </button>
+                    <button onclick="minimizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/minimize.svg" alt="0"> </button> 
+                    <button onclick="maximizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/maximize.svg" alt="1"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg" alt="r"> </button>
                 </div>   
             </div>` + content;
         }
@@ -60,7 +60,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
             <div class="WTop-Bar" id="${top}"> 
                 <div> <p>${title}</p> </div> 
                 <div> 
-                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg" alt="r"> </button>
                 </div>   
             </div>` + content;
         }else{
@@ -68,7 +68,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
             <div class="WTop-Bar" id="${top}"> 
                 <div> <img src="${icon}"> <p>${title}</p> </div> 
                 <div> 
-                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg" alt="r"> </button>
                 </div>   
             </div>` + content;
         }
