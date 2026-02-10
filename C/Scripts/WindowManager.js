@@ -3,10 +3,6 @@ let i = 1;
 
 const ClickSound = new Audio("");
 
-//function Recharge(){
-//    Header = document.getElementById('WTop-Bar' + localStorage.getItem("totalsoft")).addEventListener('mousedown', mouseDownHeader);;
-//    console.log("Recharged")
-//}
 let startX = 0, startY = 0, newX = 0, newY = 0;
 
 document.addEventListener('mouseup', mouseUp);
@@ -22,6 +18,9 @@ function mouseDown(e){
         }else if(e.target.classList.contains("WTop-Bar")){
             idee = e.target.id 
             mouseDownHeader(e);
+        }else if(e.target.classList.contains("taskbar-button")){
+            console.log("en boton de la barra de tareas")
+            deminimizeWindow(e.target.id.replace("btt", ""))
         }
         else{
             console.log(e.target)
@@ -53,6 +52,7 @@ function mouseDownHeader(e){
 }
 
 function mouseMove(e){
+    //Con el movimiento del mouse, se actualiza la posición de la ventana
     e.preventDefault();
 
     newX = e.clientX - startX;
@@ -63,17 +63,32 @@ function mouseMove(e){
 }
 
 function mouseUp(e){
-    console.log("MouseUp")
+    //Cancela el movimiento de la ventana al soltar el mouse
     document.removeEventListener('mousemove', mouseMove);
 }
-function currentWindow(e){
-    console.log(e.target.id);
-    
-    localStorage.setItem('currentclick', e.target.id);
+
+function minimizeWindow(ides){
+    //minimiza la ventana
+    document.getElementById('win'+ ides).style.visibility = 'hidden';
 }
 
+function maximizeWindow(ides){
+    //maximiza la ventana
+    document.getElementById('win'+ ides).style.width = window.innerWidth + 'px';
+    document.getElementById('win'+ ides).style.height = window.innerHeight + 'px';
+    document.getElementById('win'+ ides).style.top = '0px';
+    document.getElementById('win'+ ides).style.left = '0px';
+}
+
+function deminimizeWindow(ides){
+    //desminimiza la ventana al hacer click en el botón de la barra de tareas
+    console.log("Deminimizar ventana " + ides)
+    document.getElementById('win'+ ides).style.visibility = 'visible';
+}
+
+// Cerrar ventana
 function closeWindow(ides){
-    console.log(`cerrando... ` + ides)
+    //elimina la ventana y el botón de la barra de tareas
     document.getElementById('win'+ ides).outerHTML = ' ';
     document.getElementById('btt'+ides).outerHTML = ' ';
 }

@@ -38,8 +38,8 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
             <div class="WTop-Bar" id="${top}"> 
                 <div><p>${title}</p> </div> 
                 <div> 
-                    <button > <img src="./Styles/icons/minimize.svg"> </button> 
-                    <button> <img src="./Styles/icons/maximize.svg"> </button>
+                    <button onclick="minimizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/minimize.svg"> </button> 
+                    <button onclick="maximizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/maximize.svg"> </button>
                     <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg"> </button>
                 </div>   
             </div>` + content;
@@ -48,8 +48,8 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
             <div class="WTop-Bar" id="${top}"> 
                 <div> <img src="${icon}" class="icon"> <p>${title}</p> </div> 
                 <div> 
-                    <button > <img src="./Styles/icons/minimize.svg"> </button> 
-                    <button> <img src="./Styles/icons/maximize.svg"> </button>
+                    <button onclick="minimizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/minimize.svg"> </button> 
+                    <button onclick="maximizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/maximize.svg"> </button>
                     <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg"> </button>
                 </div>   
             </div>` + content;
@@ -88,6 +88,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
     }else{
         mainButton.innerHTML = `<img src="${icon}"> <p>${title}</p>`
     }
+
     currentTaskbar.insertAdjacentElement('beforeend', mainButton)
 
 }

@@ -20,7 +20,7 @@ function mainmenuExe(){
         `);
 }
 
-let Programs_Menu = `<div> <button> <img src=./Styles/icons/MiniIcons/Program_group1-3.ico> Accessories</button> <button> <img src=./Styles/icons/MiniIcons/Program_group1-3.ico> Online Services</button> <button> <img src=./Styles/icons/MiniIcons/Program_group1-3.ico> StartUp</button> <button><img src=./Styles/icons/MiniIcons/msie1-3.png><p>Internet Explorer</p></button> <button onclick=CmdEXE()> <img src=./Styles/appicons/ms_dos-1.png> CMD</button> <button>Mail</button> <button><img src=./Styles/icons/MiniIcons/Windows_Explorer1-3.ico>Windows Explorer</button> </div>`
-let Documentos_Menu = `<div> <button onclick=ReadmeEXE()> <img src=./Styles/icons/MiniIcons/Txt1-3.ico> Readme.txt</button> </div>`
+let Programs_Menu = `<div> <button> <img src='./Styles/icons/MiniIcons/Program_group1-3.ico'> Accessories</button> <button> <img src='./Styles/icons/MiniIcons/Program_group1-3.ico'> Online Services</button> <button> <img src='./Styles/icons/MiniIcons/Program_group1-3.ico'> StartUp</button> <button><img src='./Styles/icons/MiniIcons/msie1-3.png'><p>Internet Explorer</p></button> <button onclick=CmdEXE()> <img src='./Styles/appicons/ms_dos-1.png'> CMD</button> <button>Mail</button> <button><img src='./Styles/icons/MiniIcons/Windows_Explorer1-3.ico'>Windows Explorer</button> </div>`
+let Documentos_Menu = `<div> <button onclick=ReadmeEXE()> <img src='./Styles/icons/MiniIcons/Txt1-3.ico'> Readme.txt</button> </div>`
 let Settings_Menu = `<div> <button>Control Panel</button> <button>Taskbar & Start Menu...</button> </div>`
 let Find_Menu = `<div> <button>Files or Folders...</button> <button>On The XD Network...</button> </div>`
