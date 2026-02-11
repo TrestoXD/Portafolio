@@ -1,4 +1,4 @@
-let debugmode = false;
+let debugmode = true;
 
 if(debugmode == false){
     console.log("Initiating Countdown...");
