@@ -22,7 +22,10 @@ function WellcomeExe(){
                     <div><img src="./Styles/icons/Welcome_Fact_95.svg" style="width: 50px"></div> 
                     <div style="padding-top:20px"> <b>Sabías que...</b> <p id="welcomefact">Texto...</p> </div>      
                 </div>
-                <div style="margin-top: 25px; margin-right:10px;">
+                <div style="margin-top: 25px; margin-right:10px; display:flex; flex-direction:column;">
+                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=RandomFact()> Rotar Fact </button>
+                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=RandomFact()> Curriculum </button>
+                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=RandomFact()> Proyectos </button>
                     <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=RandomFact()> Rotar Fact </button>
                 </div>
             </div>
