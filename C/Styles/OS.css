@@ -692,6 +692,56 @@ body{
     right: 0;
 }
 
+
+
+
+/* DESKTOP */
+
+
+
+.overlay{
+    padding: 4px;
+}
+
 .desktop_button{
+    display: block;
+
+    width: 80px;
+    height: 80px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: white;
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop_button:hover p, .desktop_button:hover img{
+    background-color: #000080;
+}
+
+.desktop_button p{
+    text-wrap: wrap;
+    word-wrap: break-word;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 4px;
+    margin: 0;
+}
+
+.appicon{
+    width: 40px;
+}
+
+.appdecor{
+    position: absolute;
+
+    left: 0;
     
 }

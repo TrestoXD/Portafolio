@@ -24,9 +24,9 @@ function WellcomeExe(){
                 </div>
                 <div style="margin-top: 25px; margin-right:10px; display:flex; flex-direction:column;">
                     <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=RandomFact()> Rotar Dato </button>
-                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=pdfEXE("./Archivos/Curriculum-2025-2026.pdf")> Sobre mí </button>
+                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=sobremiEXE()> Sobre mí </button>
                     <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=pdfEXE("./Archivos/Curriculum-2025-2026.pdf")> Curriculum </button>
-                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=pdfEXE("./Archivos/Curriculum-2025-2026.pdf")> Proyectos </button>
+                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=window.open('https://github.com/TrestoXD?tab=repositories')> Proyectos </button>
                 </div>
             </div>
             <div class="Wsided-left"> 

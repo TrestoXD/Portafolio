@@ -4,7 +4,7 @@ console.log(timer)
 
 if(debugmode == false){
     console.log("Initiating Countdown...");
-    setTimeout(StartOS, (timer) * 10000);
+    setTimeout(StartOS, (timer) * 4000);
 }
 
 function StartOS(){
