@@ -7,14 +7,14 @@ function mainmenuExe(){
                 <img src="./Styles/icons/sidebar95.png" id="minmenus" style="height:200px; ">
             </div>
             <div style="display:flex; flex-direction:column; width:100%;">
-                <button onmouseenter="MainmenusecExe('200px','166px',true,true, '${Programs_Menu}')"> <img src="./Styles/appicons/directory_program_group.ico"> <p>Programas</p> <img class="arrow" src="./Styles/icons/Arrow.ico"> </button>
-                <button onmouseenter="MainmenusecExe('200px','272px',true,true, '${Documentos_Menu}')"> <img src="./Styles/appicons/documents_normal.ico"> <p>Documentos</p> <img class="arrow" src="./Styles/icons/Arrow.ico"> </button>
-                <button onmouseenter="MainmenusecExe('200px','206px',true,true, '${Settings_Menu}')"> <img src="./Styles/appicons/settings_gear.ico" style="scale:1.5;"> <p>Configuración</p> <img class="arrow" src="./Styles/icons/Arrow.ico"> </button>
-                <button onmouseenter="MainmenusecExe('200px','166px',true,true, '${Find_Menu}')"> <img src="./Styles/appicons/search_file.ico"> <p>Buscar</p> <img class="arrow" src="./Styles/icons/Arrow.ico"> </button>
-                <button onmouseenter="Delete_MainmenusecExe()"> <img src='./Styles/appicons/help_book_big.ico'> <p>Ayuda</p></button>
-                <button onmouseenter="Delete_MainmenusecExe()"> <img src='./Styles/appicons/application_hourglass.ico'> <p>Ejecuta</p></button>
+                <button onmouseenter="MainmenusecExe('200px','166px',true,true, '${Programs_Menu}')"> <img src=./Styles/appicons/directory_program_group.ico> <p>Programas</p> <img class=arrow src=./Styles/icons/Arrow.ico> </button>
+                <button onmouseenter="MainmenusecExe('200px','272px',true,true, '${Documentos_Menu}')"> <img src=./Styles/appicons/documents_normal.ico> <p>Documentos</p> <img class=arrow src=./Styles/icons/Arrow.ico> </button>
+                <button onmouseenter="MainmenusecExe('200px','206px',true,true, '${Settings_Menu}')"> <img src=./Styles/appicons/settings_gear.ico style=scale:1.5;> <p>Configuración</p> <img class=arrow src=./Styles/icons/Arrow.ico> </button>
+                <button onmouseenter="MainmenusecExe('200px','166px',true,true, '${Find_Menu}')"> <img src=./Styles/appicons/search_file.ico> <p>Buscar</p> <img class="arrow" src=./Styles/icons/Arrow.ico> </button>
+                <button onmouseenter="Delete_MainmenusecExe()"> <img src=./Styles/appicons/help_book_big.ico> <p>Ayuda</p></button>
+                <button onmouseenter="Delete_MainmenusecExe()"> <img src=./Styles/appicons/application_hourglass.ico> <p>Ejecuta</p></button>
                 <hr>
-                <button onmouseenter="Delete_MainmenusecExe()" style="bottom:0; "> <img src="./Styles/appicons/shut_down_normal-2.png" style="height: 45px; margin:-6px"> <p>Apagar...</p></button>
+                <button onmouseenter="Delete_MainmenusecExe()" style=bottom:0;> <img src=./Styles/appicons/shut_down_normal-2.png style=height: 45px; margin:-6px> <p>Apagar...</p></button>
             </div>
         </div>
         `);
