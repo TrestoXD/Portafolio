@@ -23,10 +23,10 @@ function WellcomeExe(){
                     <div style="padding-top:20px"> <b>Sabías que...</b> <p id="welcomefact">Texto...</p> </div>      
                 </div>
                 <div style="margin-top: 25px; margin-right:10px; display:flex; flex-direction:column;">
-                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=RandomFact()> Rotar Fact </button>
-                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=RandomFact()> Curriculum </button>
-                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=RandomFact()> Proyectos </button>
-                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=RandomFact()> Rotar Fact </button>
+                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=RandomFact()> Rotar Dato </button>
+                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=pdfEXE("./Archivos/Curriculum-2025-2026.pdf")> Sobre mí </button>
+                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=pdfEXE("./Archivos/Curriculum-2025-2026.pdf")> Curriculum </button>
+                    <button class="button" style="padding:4px; width:100px; margin-bottom:8px" onclick=pdfEXE("./Archivos/Curriculum-2025-2026.pdf")> Proyectos </button>
                 </div>
             </div>
             <div class="Wsided-left"> 
@@ -64,7 +64,15 @@ function RandomFact(){
     let generatedFact = "";
     let generatedNum = 0;
 
-    let Facts = ['El fuego quema','Un rayo cósmico NO fue el causante del glitch en un speedrun de Mario 64','Las zapatillas se ponen en los pies','Cuando construyeron las pirámides de Egipto aún existían los mamuts', 'Sabias que las gallinas pueden mantener su cabeza en un punto fijo?', 'Sabías que Cleopatra se lleva casi el mismo tiempo con la construcción de las pirámides que nosotros con ella?', 'sabias que las unicas partes del cuerpo que siguen creciendo son la nariz i las orejas', 'Un acto sincero de bondad, siempre provoca otro.', 'Un Gran Poder Conlleva Una Gran Responsabilidad', 'Eso es todo, UN SALTO DE FE','Sea cual sea la adversidad que se nos presente, la batalla que ruja en nuestro interior, siempre tenemos Elección y siempre podemos optar por hacer lo correcto', 'Tus decisiones... Tus acciones... Eso es lo que te define', 'Los sueños nos salva. Los sueños nos elevan y nos transforman y por mi alma juro que hasta que mi sueño de un mundo donde la dignidad, el honor y la justicia se convierta en la realidad que todos compartimos, nunca dejaré de luchar.'];
+    let Facts = ['El fuego quema','Un rayo cósmico NO fue el causante del glitch en un speedrun de Mario 64',
+        'Las zapatillas se ponen en los pies','Cuando construyeron las pirámides de Egipto aún existían los mamuts', 
+        'Sabias que las gallinas pueden mantener su cabeza en un punto fijo?', 
+        'Sabías que Cleopatra se lleva casi el mismo tiempo con la construcción de las pirámides que nosotros con ella?', 
+        'sabias que las unicas partes del cuerpo que siguen creciendo son la nariz i las orejas', 'Un acto sincero de bondad, siempre provoca otro.', 
+        'Un Gran Poder Conlleva Una Gran Responsabilidad', 'Eso es todo, UN SALTO DE FE',
+        'Sea cual sea la adversidad que se nos presente, la batalla que ruja en nuestro interior, siempre tenemos Elección y siempre podemos optar por hacer lo correcto', 
+        'Tus decisiones... Tus acciones... Eso es lo que te define',
+        'Los sueños nos salva. Los sueños nos elevan y nos transforman y por mi alma juro que hasta que mi sueño de un mundo donde la dignidad, el honor y la justicia se convierta en la realidad que todos compartimos, nunca dejaré de luchar.'];
 
     function getRandomInt(min,max){
         const mincel = Math.ceil(min);
