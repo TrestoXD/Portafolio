@@ -79,3 +79,69 @@
 .Command-prompt input:focus{
     outline: none;
 }
+
+/* Papelera */
+.papelera{
+    padding-left: 2px;
+}
+
+.papelera button{
+    border: none;
+    background-color: transparent;
+}
+
+.papelera button:hover{
+    color: white;
+    background-color: #000080;
+}
+
+.papelerainfo{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #808080 white white #808080;
+
+    width: 100%;
+
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+.archivos-papelera{
+    display: flex;
+    flex-direction: column;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: #808080 white white #808080;
+    
+    width: calc(100% - 4px);
+    height: auto;
+
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.archivos-papelera-tipos{
+    top: 1;
+    
+    display: flex;
+    flex-direction: row;
+
+    height: 22px;
+}
+.archivos-papelera-tipos p{
+    margin: 0;
+    padding: 2px;
+
+    padding-right: 80px;
+
+    height: 15px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+}
+
+.archivos-papelera-archivos{
+    background-color: white;
+
+}
