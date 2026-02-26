@@ -20,7 +20,7 @@ function mainmenuExe(){
         `);
 }
 
-let Programs_Menu = `<div> <button> <img src=./Styles/icons/MiniIcons/Programgroup13.ico> Accessories</button> <button> <img src=./Styles/icons/MiniIcons/Programgroup13.ico> Online Services</button> <button> <img src=./Styles/icons/MiniIcons/Programgroup13.ico> StartUp</button> <button><img src=./Styles/icons/MiniIcons/msie1-3.png><p>Internet Explorer</p></button> <button onclick=CmdEXE()> <img src=./Styles/appicons/msdos1.png> CMD</button> <button>Mail</button> <button><img src=./Styles/icons/MiniIcons/WindowsExplorer.ico>Windows Explorer</button> </div>`
+let Programs_Menu = `<div> <button> <img src=./Styles/icons/MiniIcons/Programgroup.ico> Accessories</button> <button> <img src=./Styles/icons/MiniIcons/Programgroup.ico> Online Services</button> <button> <img src=./Styles/icons/MiniIcons/Programgroup.ico> StartUp</button> <button><img src=./Styles/icons/MiniIcons/msie1-3.png><p>Internet Explorer</p></button> <button onclick=CmdEXE()> <img src=./Styles/appicons/msdos1.png> CMD</button> <button>Mail</button> <button><img src=./Styles/icons/MiniIcons/WindowsExplorer.ico>Windows Explorer</button> </div>`
 let Documentos_Menu = `<div> <button onclick=ReadmeEXE()> <img src=./Styles/icons/MiniIcons/Txt1-3.ico> Readme.txt</button> </div>`
 let Settings_Menu = `<div> <button>Control Panel</button> <button>Taskbar & Start Menu...</button> </div>`
 let Find_Menu = `<div> <button>Files or Folders...</button> <button>On The XD Network...</button> </div>`
