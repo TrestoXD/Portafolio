@@ -14,7 +14,7 @@ function mainmenuExe(){
                 <button onmouseenter="Delete_MainmenusecExe()"> <img src=./Styles/appicons/help_book_big.ico> <p>Ayuda</p></button>
                 <button onmouseenter="Delete_MainmenusecExe()"> <img src=./Styles/appicons/application_hourglass.ico> <p>Ejecuta</p></button>
                 <hr>
-                <button onmouseenter="Delete_MainmenusecExe()" style=bottom:0;> <img src=./Styles/appicons/shut_down_normal-2.png style=height: 45px; margin:-6px> <p>Apagar...</p></button>
+                <button onmouseenter="Delete_MainmenusecExe()" style=bottom:0;> <img src='./Styles/appicons/shut_down_normal-2.png' style=height: 55px; margin:-6px> <p>Apagar...</p></button>
             </div>
         </div>
         `);
