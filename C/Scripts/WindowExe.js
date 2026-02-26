@@ -22,8 +22,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
     if( img == null){
         icon = null;
     }else{
-        icon = './Styles/AppIcons/'+img+'.png';
-        console.log(icon)
+        icon = ("./Styles/AppIcons/"+img+".png");
     }
 
     if(ontop == true){
