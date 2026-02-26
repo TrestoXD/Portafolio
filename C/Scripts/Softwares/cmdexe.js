@@ -1,7 +1,7 @@
 
 
 function CmdEXE(){
-    WindowExe('COMMAND PROMPT', 400, 200, 'ms_dos-1', true, true, `
+    WindowExe('COMMAND PROMPT', 400, 200, 'msdos1', true, true, `
     <div class="Command-prompt" id="Commandprompt" onclick="document.getElementById('inputcommand').focus()"> 
     
     <p>Vito Minaya González CC0 1.0 Universal</p>
