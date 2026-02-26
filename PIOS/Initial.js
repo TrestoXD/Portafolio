@@ -1,5 +1,5 @@
 let debugmode = false;
-const time = 10;
+const time = 3;
 
 document.body.addEventListener('keypress', BootPress);
 const sel = document.getElementById("select")
@@ -9,16 +9,15 @@ sel.addEventListener('change',function(e){
     console.log("The value is: "+ value)    
 });
 
+
 if(debugmode == false){
     console.log("Initiating Countdown...");
-    ChangeTimer();
-    setTimeout(StartBoot, (10 * 1000));
+    setTimeout(StartBoot, (3 * 1000));
 }
 
-function ChangeTimer(){
-    for (let i = 1; i < time; i++) {
-        setTimeout(() => document.getElementById("countdown-text").innerText = i + "s", 1000);   
-    }
+function ChangeTimer(ti){
+    document.getElementById("countdown-text").innerText = ti;   
+    console.log("changed to " + ti)
 }
 
 function delay(ms) {
