@@ -1,23 +1,75 @@
 function PapeleraExe(){
-    WindowExe('Papelera de reciclaje', 400, 200, 'emptyreciclebin', true, true, `
+    WindowExe('Papelera de reciclaje', 400, 185, 'emptyreciclebin', true, true, `
     <div class="papelera">
         <button>File</button>
         <button>Edit</button>
         <button>View</button>
         <button>Help</button>
         <div class="archivos-papelera">
-            <div class="archivos-papelera-tipos">
-                <p>Name</p>
-                <p>Localización Original</p>
-                <p>Date Deleted</p>
-            </div>
-            <div class="archivos-papelera-archivos">
-            </div>
+            <table class="archivos-papelera-tabla" id="papelera-table">
+                <tr class="archivos-papelera-tipos">
+                    <td>Name</td>
+                    <td>Localización Original</td>
+                    <td>Date Deleted</td>
+                    <td>Type</td>
+                    <td>Size</td>
+                </tr>
+                <tr class="archivos-papelera-archivos">
+                    <td>SETUPLOG.TXT</td>
+                    <td>C:&#92</td>
+                    <td>8/1/26 14:56 </td>
+                    <td>Documento de texto</td>
+                    <td>1 KB</td>
+                </tr>
+                <tr class="archivos-papelera-archivos">
+                    <td>fermium-ab5839d0afnna043</td>
+                    <td>C:&#92USERS&#92PROYECTOS</td>
+                    <td>3/11/25 20:41 </td>
+                    <td>Carpeta de archivos</td>
+                    <td>4.245 KB</td>
+                </tr>
+                <tr class="archivos-papelera-archivos">
+                    <td>fermium-rb2894n23edq2ea</td>
+                    <td>C:&#92USERS&#92PROYECTOS</td>
+                    <td>3/11/25 20:36 </td>
+                    <td>Carpeta de archivos</td>
+                    <td>1 KB</td>
+                </tr>
+                <tr class="archivos-papelera-archivos">
+                    <td>KAREN</td>
+                    <td>C:&#92USERS&#92PROYECTOS</td>
+                    <td>5/11/25 17:13 </td>
+                    <td>Carpeta de archivos</td>
+                    <td>29 KB</td>
+                </tr>
+            </table>
         </div>
+        <hr style="border:none; margin:2px;">
         <div style="display:flex; width:100% ">
-            <div class="papelerainfo">0 objeto(s)</div>
-            <div class="papelerainfo">0 bytes</div>
+            <div class="papelerainfo" id="papelera-objetos-item">0 objeto(s)</div>
+            <div class="papelerainfo" id="papelera-byte-item">0 bytes</div>
         </div>
     </div>
         `);
+    const table = document.getElementById("papelera-table");
+    console.log("papelera-table");
+
+    const itemstot = document.getElementById("papelera-objetos-item");
+    itemstot.innerText = (table.rows.length - 1) + " objeto(s)"
+
+    const bytetot = document.getElementById("papelera-byte-item");
+    bytetot.innerText = (sumtable() + " bytes")
+    
+}
+
+function sumtable(){
+    const table = document.getElementById("papelera-table");
+    let total = 0;
+
+    for (let i = 0; i < table.rows.length - 1; i++) {
+        total = total + parseFloat( table.rows[ i + 1 ].cells[ 4 ].innerText);
+        
+    }
+
+    return total.toFixed( 3 );
 }
